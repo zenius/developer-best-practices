@@ -1,0 +1,76 @@
+1. Declare all the variables on 'Top' 
+   Reasons: 
+   i. It allow devloper to see the variables used in progarm. 
+   ii. Cleaner code
+   iii. Easy to fix bug in case of any error. 
+
+2. Avoid the use of global variables. 
+  Try to avoid the use of global variables. 
+  Whenever possible, use local variables. 
+  
+  Reasons:
+  i. Exposes your data to external sources. 
+  ii. Global variables are overwritten by local variables of same name. 
+
+3. Avoid the use of 'new' operator and initialize the variable when they are declared. 
+   Try to avoid the use of new operator. 
+   Whenever possible, define the variable with its data types. 
+   
+   For example: 
+   var iAmBoolean = false; //boolean
+   var iAmNumber = 0;   //number 
+   var iAmString = "";  //string 
+   var iAmArray = [];   //array
+   var iAmObject = {};  //object 
+   var iAmRegularExpression = /()/;  //Regular Expression 
+   
+   Reasons: 
+   i. 'new' operator will create confusion and results in bug. 
+   ii. It is easy to identify the datatype before hand. 
+   iii. Code maintainablity is easy. 
+   iv. Bug fixing is easy. 
+   
+4. Use 'strict' comparision operator whenever possible. 
+   Traditional comparision operator == do not involve type checking. 
+   
+   For example: 
+    0 == "" ;  //true 
+    1 =="1" ; // true 
+    
+    With strict comparison operator: 
+    0 === "";  //false 
+    1 === "1"; //false 
+   
+   Reasons: 
+   i. Easy to identify bug in the code. 
+   
+5. Avoid use of 'var', use 'const' and 'let' whenever possible. 
+   'var' declartion are hoisted and have function scope. 
+   
+   For example:
+   //'var' variable is hoisted 
+   x = 5;  //assigned the variable before it is used is allowed
+   var x;   
+  
+  //var variable has function scope 
+   function test() {
+       { 
+          var x = 5; 
+       } 
+       console.log(x);  //expected output: undefined    actual output: 5 
+   } 
+   
+   Reasons:
+   i. 'var' variables declartion leads to bug as shown in the above example. 
+   ii. Easy to fix bug with the use of 'const' and 'let' variables. 
+   iii. 'let' and 'const' maintain readability. 
+   
+   Note: 
+   i. Wherever possible, make use of 'const' keyword. 
+   ii.'const' keyword is used if the value does not change. 
+   iii. 'let' keyword is used if the value does change. 
+   
+   
+   
+   
+  
